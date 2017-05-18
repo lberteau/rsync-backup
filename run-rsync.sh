@@ -3,7 +3,7 @@
 function run-rsync {
   echo "Running backup from $1 to $2"
   mkdir -p "$2"
-  rsync --archive --delete-after --progress "$1" "$2"
+  rsync --archive --delete-after --info=progress2 "$1" "$2"
   echo "Backup from $1 to $2 successfull"
 }
 
