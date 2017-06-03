@@ -12,7 +12,7 @@ target="/mnt/e/Backup/Photos"
 run-rsync ${source} ${target}
 
 source="/mnt/d/Videos/"
-target="/mnt/e/Backup/Videos/"
+target="/mnt/e/Backup/Videos"
 run-rsync ${source} ${target}
 
 source="/mnt/d/Archives/"

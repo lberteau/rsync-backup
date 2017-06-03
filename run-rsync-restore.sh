@@ -1,25 +1,25 @@
 #!/bin/bash
 
 function run-rsync {
-  echo "Running restore from $2 to $1"
-  mkdir -p "$1"
-  rsync --archive --delete-after -h --info=progress2 "$2" "$1"
+  echo "Running restore from $1 to $2"
+  mkdir -p "$2"
+  rsync --archive --delete-after -h --info=progress2 "$1" "$2"
   echo "Restore from $1 to $2 successfull"
 }
 
-source="/mnt/d/Photos/"
-target="/mnt/e/Backup/Photos"
+target="/mnt/d/Photos"
+source="/mnt/e/Backup/Photos/"
 run-rsync ${source} ${target}
 
-source="/mnt/d/Videos/"
-target="/mnt/e/Backup/Videos/"
+target="/mnt/d/Videos"
+source="/mnt/e/Backup/Videos/"
 run-rsync ${source} ${target}
 
-source="/mnt/d/Archives/"
-target="/mnt/e/Backup/Archives"
+target="/mnt/d/Archives"
+source="/mnt/e/Backup/Archives/"
 run-rsync ${source} ${target}
 
-source="/mnt/d/Users/"
-target="/mnt/e/Backup/Users"
+target="/mnt/d/Users"
+source="/mnt/e/Backup/Users/"
 run-rsync ${source} ${target}
 
